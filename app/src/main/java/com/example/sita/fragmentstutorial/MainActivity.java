@@ -15,14 +15,9 @@ public class MainActivity extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-       // Log.d("daasd","Activty launched");
-//        setContentView(R.layout.activity_main);
-
 
         FragmentManager fragmentManager = getSupportFragmentManager();
-
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
         Configuration configInfo = getResources().getConfiguration();
 
         if(configInfo.orientation == Configuration.ORIENTATION_LANDSCAPE){
@@ -32,8 +27,6 @@ public class MainActivity extends FragmentActivity {
             PortraitFragment  portraitFragment = new PortraitFragment();
             fragmentTransaction.replace(android.R.id.content, portraitFragment);
         }
-
         fragmentTransaction.commit();
-
     }
 }
